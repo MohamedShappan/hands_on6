@@ -120,12 +120,11 @@ body{
 .second_sec{
     grid-area: second;
     background-color: white;
-    width: 78%;
+    width: 100%;
 }
 .second_sec h1{
     position: relative;
     left: 75px;
-    display: grid;
     grid-area: second;
     width: 625px;
     height: 77px;
@@ -140,7 +139,6 @@ color: #F25123;
 .second_sec p{
     position: relative;
     left: 75px;
-    display: grid;
     grid-area: second;
     width: 850px;
 height: 78px;
@@ -594,7 +592,7 @@ color: rgba(255, 255, 255, 0.5);
     left: 1%;
     background-image: url(background_blur.png);
     background-size: cover;
-    width: 430px;
+    inset: 0;
     height: 932px;
     visibility: hidden;
 }
@@ -602,12 +600,12 @@ color: rgba(255, 255, 255, 0.5);
     display: flex;
 }
 .navbar h1{
-    width: 184px;
+    width: 314px;
     font-family: 'Inter';
     font-style: normal;
     font-weight: 800;
-    font-size: 23.9189px;
-    line-height: 29px;
+    font-size: 45.9189px;
+    line-height: 54px;
     color: #FFFFFF;
     margin: 0px;
     margin-top: 28px;
@@ -616,10 +614,16 @@ color: rgba(255, 255, 255, 0.5);
     font-family: 'Inter';
     font-style: normal;
     font-weight: 400;
-    font-size: 15px;
+    font-size: 20px;
     line-height: 27px;
     color: rgba(255, 255, 255, 0.5);
     margin: 0;
+}
+.navbar .exit{
+    width: 7%;
+    height: 8%;
+    margin-top: 25px;
+    margin-left: 237px;
 }
 .navbar .sec{
     display: flex;
@@ -647,13 +651,13 @@ color: #F25123;
 }
 @media (max-width:750px) {
     body{
-        width: 1000px;
+        width: 752px;
     }
     .container{
-        width: 100%;
+        width: 94%;
     }
     .nav{
-        width: 85%;
+        width: 61%;
     }
     .third_sec{
         width: 60%;
@@ -665,7 +669,7 @@ color: #F25123;
         
     }
     .navbar{
-        left: 55%;
+        left: 1%;
     }
     #navcheck:checked~.navbar{
         visibility: visible;
@@ -681,14 +685,16 @@ color: #F25123;
     }
     .nav ul,.nav input{
         visibility: hidden;
+        width: 0px;
     }
     .first_sec{
         height: 800px;
-        width: 80%;
+        width: 60%;
     }
     .first_sec .second{
         visibility: hidden;
         width: 0px;
+        margin: 0px;
     }
     .first_sec .box{
         width: 100%;
@@ -719,36 +725,36 @@ color: #F25123;
         background-color: #000000;
         position: relative;
         top: -13%;
-        width: 70%;
+        width: 61%;
     }
     .second_sec .how1{
         position: absolute;
-    width: 226px;
-    height: 90px;
+        width: 226px;
+        height: 90px;
 
-    font-family: 'Inter';
-    font-style: normal;
-    font-weight: 700;
-    font-size: 36.97px;
-    line-height: 45px;
-    color: #F25123;
+        font-family: 'Inter';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 45px;
+        line-height: 45px;
+        color: #F25123;
     }
     .second_sec p{
         margin-top: 135px;
-        width: 386px;
+        width: 545px;
         height: 40px;
 
         font-family: 'Inter';
         font-style: normal;
         font-weight: 400;
-        font-size: 16.48px;
+        font-size: 30px;
         line-height: 20px;
 
         color: rgba(255, 255, 255, 0.5);
     }
     .second_sec .btn{
         top: 2%;
-        left: 50%;
+        left: 70%;
 
     }
     .users{
@@ -761,7 +767,7 @@ color: #F25123;
         border: 0.964517px solid rgba(255, 255, 255, 0.25);
         box-shadow: 0px 48.2259px 86.8065px rgba(0, 0, 0, 0.25);
         border-radius: 14.4678px;
-        width: 700px;
+        width: 640px;
         height: 240px;
     }
     .users .oneuser .imguser{
@@ -770,8 +776,9 @@ color: #F25123;
     }
     .users h1,.users h2{
         color: #FFFFFF;
-        left: 35%;
-        top: -115px;
+        margin: auto;
+        left: -3%;
+        top: -91px;
     }
     .users h2{
         width: 198px;
@@ -788,7 +795,7 @@ color: #F25123;
         color: rgba(255, 255, 255, 0.5);
     }
     .users button{
-        top: -100px;
+        top: -45px;
         background-color: #1E1E1E;
         border: 1.92903px solid rgba(255, 255, 255, 0.25);
         border-radius: 38.5807px;
@@ -801,10 +808,10 @@ color: #F25123;
         align-items: center;
         height: 130%;
         margin-top: -240px;
-        width: 85%;
+        width: 60%;
     }
     .state1 .pop{
-        left: 61%;
+        left: 67%;
     }
     .third_sec h4{
         width: 386.32px;
@@ -812,30 +819,48 @@ color: #F25123;
         font-family: 'Inter';
         font-style: normal;
         font-weight: 700;
-        font-size: 36.97px;
+        font-size: 47px;
         line-height: 45px;
     }
     .third_sec h2{
         width: fit-content;
-        height: 40px;
+        height: fit-content;
+        font-size: 35px;
+        margin-top: auto;
+        margin-left: 30px;
     }
     .status{
-        display: flex;
+        grid-auto-flow: column;
+        display: grid;
+        grid-auto-columns: 62%;
+        height: 700px;
+        overflow: auto;
+    }
+    .status::-webkit-scrollbar{
+        width: 0px;
     }
     .state1{
         position: static;
         margin-top: 65px;
     }
+    .state1 h2{
+        font-size: 20px;
+        margin: auto;
+    }
     .radbtn{
         margin-top: 10px;
+        justify-content: end;
     }
     .four_sec{
         flex-direction: column;
         height: 110%;
-        width: 87%;
+        width: 65%;
     }
     .four_sec div{
         position: static;
+    }
+    .fourpart,.firstpart,.secpart{
+        margin-left: 20px;
     }
     .four_sec div div{
         position: static;
@@ -882,11 +907,11 @@ color: #F25123;
         height: fit-content;
     }
     .secpart,.fourpart{
-        margin-left: 10px;
+        margin-left: 35px;
     }
     .thirdpart{
         margin-left: 50%;
-        margin-top:-27%;
+        margin-top:-36%;
     }
     .fourpart h1{
         margin-top: 60px;
@@ -898,6 +923,6 @@ color: #F25123;
         position: static;
     }
     .fourpart div span{
-        margin-left: 25px;
+        margin-left: 60px;
     }
 }
